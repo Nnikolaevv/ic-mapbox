@@ -1,0 +1,65 @@
+@mixin button-style
+    width: 120px
+    height: 40px
+    background-color: rgba(35, 55, 75, 0.9)
+    color: #fff
+    border-radius: 4px
+    &:hover
+      background-color: gray
+
+.App
+  margin: 0 auto
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+
+.map
+  &__block
+    width: 800px
+    height: 500px
+    background-color: white
+  &__container
+    height: 100%
+  &__sidebar
+    background-color: rgba(35, 55, 75, 0.9)
+    color: #fff
+    padding: 6px 12px
+    font-family: monospace
+    z-index: 1
+    top: 0
+    left: 0
+    border-radius: 4px
+  &__button
+    display: flex
+    justify-content: flex-end
+    margin-top: 5px
+  &__radiobutton
+    width: 200px
+    margin: 5px
+    display: flex
+    justify-content: space-between
+    & div label
+      margin-right: 5px
+
+.control
+  display: flex
+  justify-content: space-between
+
+.button
+  &__add_point
+    width: 120px
+    height: 40px
+    background-color: rgba(35, 55, 75, 0.9)
+    color: #fff
+    border-radius: 4px
+    &:hover
+      background-color: gray
+  &__add_line
+    width: 120px
+    height: 40px
+    background-color: rgba(35, 55, 75, 0.9)
+    color: #fff
+    border-radius: 4px
+    &:hover
+      background-color: gray
