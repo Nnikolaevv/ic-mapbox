@@ -41,6 +41,7 @@ const data: Array<dataType> = [
 ]
 
 function App() {
+    // Init viewport
     const [viewport, setViewport] = useState<ViewportType>({
         width: 800,
         height: 400,
@@ -57,7 +58,6 @@ function App() {
     const [radioButton, setRadioButton] = useState<string>('all')
 
     // Popup
-    // const [showPopup, togglePopup] = useState(false)
     const [popupId, setPopupId] = useState(0)
 
     const onMapClick = (e: MapEvent) => {
@@ -98,7 +98,8 @@ function App() {
                     onViewportChange={(nextViewport: ViewportType) => setViewport(nextViewport)}
                     mapStyle="mapbox://styles/nexon91/ckwwaref790ks16p3pn7ytyw1"
                 >
-                    {geoData.filter(p => radioButton === 'all' || p.type === radioButton)
+                    {geoData
+                        .filter(p => radioButton === 'all' || p.type === radioButton)
                         .map(p => (
                                 <div key={p.id}>
                                     <Marker
